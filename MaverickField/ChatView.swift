@@ -16,7 +16,7 @@ class ChatViewModel: ObservableObject {
     @Published var errorMessage: String? = nil
 
     private var streamTask: Task<Void, Never>?
-    private(set) var service: MCCService
+    var service: MCCService
     var speech: SpeechManager?
 
     init(settings: AppSettings) {

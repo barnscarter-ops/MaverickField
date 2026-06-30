@@ -2,7 +2,7 @@ import Foundation
 
 // MARK: - Workflow modes
 
-enum WorkflowMode: String, CaseIterable, Identifiable {
+enum WorkflowMode: String, CaseIterable, Identifiable, Codable {
     case ask   = "ask"
     case agent = "agent"
     case ops   = "ops"

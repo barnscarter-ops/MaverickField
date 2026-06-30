@@ -3,7 +3,6 @@ import Foundation
 // MARK: - Workflow modes
 
 enum WorkflowMode: String, CaseIterable, Identifiable, Codable {
-    case ask   = "ask"
     case agent = "agent"
     case ops   = "ops"
 
@@ -11,23 +10,20 @@ enum WorkflowMode: String, CaseIterable, Identifiable, Codable {
 
     var label: String {
         switch self {
-        case .ask:   return "ASK MAVERICK"
         case .agent: return "MAVERICK"
-        case .ops:   return "OPERATIONS"
+        case .ops:   return "OPS"
         }
     }
 
     var tooltip: String {
         switch self {
-        case .ask:   return "Ask anything, scope jobs, and build estimates"
-        case .agent: return "Field assistant — schedule, job details, code questions"
-        case .ops:   return "Personal assistant — emails, docs, spreadsheets"
+        case .agent: return "Field assistant — estimates, HCP, questions, scheduling"
+        case .ops:   return "Office — emails, docs, spreadsheets, comms"
         }
     }
 
     var accentColor: String {
         switch self {
-        case .ask:   return "cyan"
         case .agent: return "purple"
         case .ops:   return "green"
         }

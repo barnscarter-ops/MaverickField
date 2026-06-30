@@ -6,7 +6,7 @@ class ChatViewModel: ObservableObject {
     @Published var messages: [ChatMessage] = []
     @Published var inputText = ""
     @Published var isBusy = false
-    @Published var mode: WorkflowMode = .ask
+    @Published var mode: WorkflowMode = .agent
     @Published var attachments: [Attachment] = []
     @Published var pendingEstimate: PendingEstimate? = nil
     @Published var showVoicePanel = false
@@ -296,7 +296,7 @@ struct ChatView: View {
             Text("MAVERICK READY")
                 .font(.system(size: 16, weight: .bold, design: .monospaced))
                 .foregroundColor(Color(hex: "#e8ebf2"))
-            Text("Select a mode and send your first message")
+            Text("Send a message to get started")
                 .font(.system(size: 13))
                 .foregroundColor(Color(hex: "#8b93a7"))
         }
@@ -424,7 +424,6 @@ struct ChatView: View {
 
     private func modeColor(_ m: WorkflowMode) -> Color {
         switch m {
-        case .ask:   return .cyan
         case .agent: return .purple
         case .ops:   return .green
         }

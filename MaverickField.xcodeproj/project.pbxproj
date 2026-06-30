@@ -18,7 +18,7 @@
 		000000000000000000001009 /* VoicePanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000A /* VoicePanelView.swift */; };
 		00000000000000000000100A /* EstimateBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000B /* EstimateBarView.swift */; };
 		00000000000000000000100B /* JobHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000C /* JobHistoryView.swift */; };
-		00000000000000000000100C /* FieldToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000D /* FieldToolsView.swift */; };
+		00000000000000000000100C /* NECTablesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000D /* NECTablesView.swift */; };
 		00000000000000000000100D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000E /* SettingsView.swift */; };
 		00000000000000000000100E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 00000000000000000000000F /* Assets.xcassets */; };
 		00000000000000000000100F /* Speech.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 000000000000000000000010 /* Speech.framework */; };
@@ -39,7 +39,7 @@
 		00000000000000000000000A /* VoicePanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoicePanelView.swift; sourceTree = "<group>"; };
 		00000000000000000000000B /* EstimateBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EstimateBarView.swift; sourceTree = "<group>"; };
 		00000000000000000000000C /* JobHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobHistoryView.swift; sourceTree = "<group>"; };
-		00000000000000000000000D /* FieldToolsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FieldToolsView.swift; sourceTree = "<group>"; };
+		00000000000000000000000D /* NECTablesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NECTablesView.swift; sourceTree = "<group>"; };
 		00000000000000000000000E /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		00000000000000000000000F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		000000000000000000000010 /* Speech.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Speech.framework; path = System/Library/Frameworks/Speech.framework; sourceTree = SDKROOT; };
@@ -87,7 +87,7 @@
 				00000000000000000000000A /* VoicePanelView.swift */,
 				00000000000000000000000B /* EstimateBarView.swift */,
 				00000000000000000000000C /* JobHistoryView.swift */,
-				00000000000000000000000D /* FieldToolsView.swift */,
+				00000000000000000000000D /* NECTablesView.swift */,
 				00000000000000000000000E /* SettingsView.swift */,
 				00000000000000000000000F /* Assets.xcassets */,
 			);
@@ -193,7 +193,7 @@
 				000000000000000000001009 /* VoicePanelView.swift in Sources */,
 				00000000000000000000100A /* EstimateBarView.swift in Sources */,
 				00000000000000000000100B /* JobHistoryView.swift in Sources */,
-				00000000000000000000100C /* FieldToolsView.swift in Sources */,
+				00000000000000000000100C /* NECTablesView.swift in Sources */,
 				00000000000000000000100D /* SettingsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

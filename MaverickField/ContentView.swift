@@ -13,23 +13,17 @@ struct ContentView: View {
                 }
                 .tag(0)
 
-            FieldToolsView()
+            NECTablesView()
                 .tabItem {
-                    Label("Field", systemImage: "bolt.fill")
+                    Label("Tables", systemImage: "table.fill")
                 }
                 .tag(1)
-
-            JobHistoryView()
-                .tabItem {
-                    Label("Jobs", systemImage: "folder.fill")
-                }
-                .tag(2)
 
             SettingsView()
                 .tabItem {
                     Label("Settings", systemImage: "gearshape.fill")
                 }
-                .tag(3)
+                .tag(2)
         }
         .tint(Color(hex: "#d9a441"))
         .background(Color(hex: "#0a0d14"))

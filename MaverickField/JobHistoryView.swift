@@ -120,7 +120,6 @@ struct JobRow: View {
 
     private func modeColor(_ m: WorkflowMode) -> Color {
         switch m {
-        case .ask:   return .cyan
         case .agent: return .purple
         case .ops:   return .green
         }

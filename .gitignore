@@ -1,0 +1,11 @@
+.DS_Store
+*.xcuserstate
+xcuserdata/
+MaverickField.xcodeproj/project.xcworkspace/xcuserdata/
+*.moved-aside
+DerivedData/
+build/
+*.ipa
+*.xcarchive
+Pods/
+.build/

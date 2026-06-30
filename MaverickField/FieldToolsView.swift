@@ -91,14 +91,14 @@ struct ToolCard: View {
 
 struct BreakerCounterView: View {
     @State private var items: [CounterItem] = [
-        CounterItem(label: "20A Single Pole", count: 0),
-        CounterItem(label: "15A Single Pole", count: 0),
-        CounterItem(label: "30A Double Pole", count: 0),
-        CounterItem(label: "40A Double Pole", count: 0),
-        CounterItem(label: "50A Double Pole", count: 0),
-        CounterItem(label: "AFCI Breaker", count: 0),
-        CounterItem(label: "GFCI Breaker", count: 0),
-        CounterItem(label: "Tandem Breaker", count: 0),
+        CounterItem(name:"20A Single Pole", count: 0),
+        CounterItem(name:"15A Single Pole", count: 0),
+        CounterItem(name:"30A Double Pole", count: 0),
+        CounterItem(name:"40A Double Pole", count: 0),
+        CounterItem(name:"50A Double Pole", count: 0),
+        CounterItem(name:"AFCI Breaker", count: 0),
+        CounterItem(name:"GFCI Breaker", count: 0),
+        CounterItem(name:"Tandem Breaker", count: 0),
     ]
     @State private var shareText = ""
     @State private var showShare = false
@@ -115,7 +115,7 @@ struct BreakerCounterView: View {
                     .font(.system(size: 13, weight: .semibold, design: .monospaced))
                     .foregroundColor(Color(hex: "#8b93a7"))
                 Spacer()
-                Button("Reset") { items = items.map { CounterItem(label: $0.label, count: 0) } }
+                Button("Reset") { items = items.map { CounterItem(name:$0.name, count: 0) } }
                     .foregroundColor(.red)
                     .font(.system(size: 13))
                 shareButton
@@ -132,7 +132,7 @@ struct BreakerCounterView: View {
     private var shareButton: some View {
         Button {
             shareText = "Breaker Count\n" + items.filter { $0.count > 0 }
-                .map { "  \($0.label): \($0.count)" }.joined(separator: "\n")
+                .map { "  \($0.name): \($0.count)" }.joined(separator: "\n")
                 + "\n  Total: \(total)"
             showShare = true
         } label: {
@@ -149,14 +149,14 @@ struct BreakerCounterView: View {
 
 struct ReceptacleTrackerView: View {
     @State private var items: [CounterItem] = [
-        CounterItem(label: "Standard Duplex", count: 0),
-        CounterItem(label: "GFCI Receptacle", count: 0),
-        CounterItem(label: "USB Receptacle", count: 0),
-        CounterItem(label: "20A Receptacle", count: 0),
-        CounterItem(label: "Decora Switch", count: 0),
-        CounterItem(label: "3-Way Switch", count: 0),
-        CounterItem(label: "Dimmer Switch", count: 0),
-        CounterItem(label: "Outlet (220V)", count: 0),
+        CounterItem(name:"Standard Duplex", count: 0),
+        CounterItem(name:"GFCI Receptacle", count: 0),
+        CounterItem(name:"USB Receptacle", count: 0),
+        CounterItem(name:"20A Receptacle", count: 0),
+        CounterItem(name:"Decora Switch", count: 0),
+        CounterItem(name:"3-Way Switch", count: 0),
+        CounterItem(name:"Dimmer Switch", count: 0),
+        CounterItem(name:"Outlet (220V)", count: 0),
     ]
     @State private var shareText = ""
     @State private var showShare = false
@@ -172,11 +172,11 @@ struct ReceptacleTrackerView: View {
                     .font(.system(size: 13, weight: .semibold, design: .monospaced))
                     .foregroundColor(Color(hex: "#8b93a7"))
                 Spacer()
-                Button("Reset") { items = items.map { CounterItem(label: $0.label, count: 0) } }
+                Button("Reset") { items = items.map { CounterItem(name:$0.name, count: 0) } }
                     .foregroundColor(.red).font(.system(size: 13))
                 Button {
                     shareText = "Receptacle/Device Count\n" + items.filter { $0.count > 0 }
-                        .map { "  \($0.label): \($0.count)" }.joined(separator: "\n")
+                        .map { "  \($0.name): \($0.count)" }.joined(separator: "\n")
                     showShare = true
                 } label: { Image(systemName: "square.and.arrow.up").foregroundColor(Color(hex: "#d9a441")) }
                 .sheet(isPresented: $showShare) { ShareSheet(items: [shareText]) }
@@ -189,14 +189,14 @@ struct ReceptacleTrackerView: View {
 
 struct FixtureCounterView: View {
     @State private var items: [CounterItem] = [
-        CounterItem(label: "Can/Recessed Light", count: 0),
-        CounterItem(label: "LED Wafer Light", count: 0),
-        CounterItem(label: "Ceiling Fan", count: 0),
-        CounterItem(label: "Pendant Light", count: 0),
-        CounterItem(label: "Vanity Bar", count: 0),
-        CounterItem(label: "Exterior Fixture", count: 0),
-        CounterItem(label: "Under-Cabinet Light", count: 0),
-        CounterItem(label: "Exit/Emergency", count: 0),
+        CounterItem(name:"Can/Recessed Light", count: 0),
+        CounterItem(name:"LED Wafer Light", count: 0),
+        CounterItem(name:"Ceiling Fan", count: 0),
+        CounterItem(name:"Pendant Light", count: 0),
+        CounterItem(name:"Vanity Bar", count: 0),
+        CounterItem(name:"Exterior Fixture", count: 0),
+        CounterItem(name:"Under-Cabinet Light", count: 0),
+        CounterItem(name:"Exit/Emergency", count: 0),
     ]
     @State private var showShare = false
     @State private var shareText = ""
@@ -212,11 +212,11 @@ struct FixtureCounterView: View {
                     .font(.system(size: 13, weight: .semibold, design: .monospaced))
                     .foregroundColor(Color(hex: "#8b93a7"))
                 Spacer()
-                Button("Reset") { items = items.map { CounterItem(label: $0.label, count: 0) } }
+                Button("Reset") { items = items.map { CounterItem(name:$0.name, count: 0) } }
                     .foregroundColor(.red).font(.system(size: 13))
                 Button {
                     shareText = "Fixture Count\n" + items.filter { $0.count > 0 }
-                        .map { "  \($0.label): \($0.count)" }.joined(separator: "\n")
+                        .map { "  \($0.name): \($0.count)" }.joined(separator: "\n")
                     showShare = true
                 } label: { Image(systemName: "square.and.arrow.up").foregroundColor(Color(hex: "#d9a441")) }
                 .sheet(isPresented: $showShare) { ShareSheet(items: [shareText]) }
@@ -379,8 +379,8 @@ struct GFCITroubleshooterView: View {
 
 func sheetContainer<Content: View, Footer: View>(
     title: String, icon: String, color: Color,
-    @ViewBuilder content: () -> Content,
-    @ViewBuilder footer: () -> Footer
+    @ViewBuilder content: @escaping () -> Content,
+    @ViewBuilder footer: @escaping () -> Footer
 ) -> some View {
     _SheetContainer(title: title, icon: icon, color: color, content: content, footer: footer)
 }
@@ -431,7 +431,7 @@ struct CounterRow: View {
 
     var body: some View {
         HStack {
-            Text(item.label)
+            Text(item.name)
                 .font(.system(size: 15))
                 .foregroundColor(Color(hex: "#e8ebf2"))
             Spacer()
